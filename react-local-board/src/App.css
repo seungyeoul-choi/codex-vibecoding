@@ -1,0 +1,275 @@
+.app-shell {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.app-logo {
+  color: var(--text-h);
+  font-weight: 800;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+.app-nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.app-nav a,
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-h);
+  background: var(--surface);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.app-nav a:hover,
+.button:hover {
+  border-color: var(--accent);
+}
+
+.app-main {
+  flex: 1;
+  padding: 32px;
+}
+
+.page-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+.page-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.muted {
+  color: var(--text);
+}
+
+.button.primary {
+  border-color: var(--accent);
+  color: #fff;
+  background: var(--accent);
+}
+
+.button.danger {
+  border-color: var(--danger);
+  color: #fff;
+  background: var(--danger);
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.notice {
+  padding: 12px 14px;
+  border: 1px solid var(--accent);
+  border-radius: 14px;
+  color: var(--text-h);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.notice.danger {
+  border-color: var(--danger);
+  background: var(--danger-bg);
+}
+
+.search-box {
+  display: grid;
+  gap: 8px;
+  color: var(--text-h);
+  font-weight: 800;
+}
+
+.search-box input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  color: var(--text-h);
+  background: #fff;
+}
+
+.post-list {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.post-list-item {
+  display: grid;
+  gap: 14px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.post-title-link {
+  color: var(--text-h);
+  font-size: 22px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.post-title-link:hover {
+  color: var(--accent);
+}
+
+.post-meta {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.post-meta div {
+  display: grid;
+  gap: 2px;
+}
+
+.post-meta dt {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.post-meta dd {
+  margin: 0;
+  color: var(--text-h);
+}
+
+.empty-state {
+  display: grid;
+  gap: 12px;
+  justify-items: start;
+  padding: 28px;
+  border: 1px dashed var(--border);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.empty-state h2,
+.empty-state p {
+  margin: 0;
+}
+
+.post-detail {
+  display: grid;
+  gap: 24px;
+}
+
+.post-detail-header {
+  display: grid;
+  gap: 16px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-detail-header h2 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 40px);
+}
+
+.post-content {
+  margin: 0;
+  white-space: pre-wrap;
+  color: var(--text-h);
+}
+
+.post-form {
+  display: grid;
+  gap: 18px;
+}
+
+.form-field {
+  display: grid;
+  gap: 8px;
+  color: var(--text-h);
+  font-weight: 800;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  color: var(--text-h);
+  background: #fff;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-field [aria-invalid='true'] {
+  border-color: var(--danger);
+}
+
+.field-error {
+  color: var(--danger);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .app-header,
+  .page-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .app-main {
+    padding: 20px;
+  }
+
+  .page-card {
+    padding: 24px;
+  }
+}
